@@ -1,7 +1,7 @@
-//InsertionSort
-//Stable Algorithm
-//in place - requires no extra space
-//O(n^2) - Time Complexity
+// InsertionSort
+// Stable Algorithm
+// in place - requires no extra space
+// O(n^2) - Time Complexity
 
 import java.util.*;
 
@@ -16,13 +16,13 @@ public class Insertion_Sort {
             int new_no = intArray[i];
             int index = i;
 
-            //finding the index to be swapped
+            // finding the index to be swapped
             while ((index > 0) && (new_no < intArray[index - 1])) {
                 index--;
             }
 
             if (index != i) {
-                //shifting array contents to the right
+                // shifting array contents to the right
                 for (int j = i; j > index; j--) {
                     intArray[j] = intArray[j - 1];
                 }
