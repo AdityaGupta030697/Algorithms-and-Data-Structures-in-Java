@@ -1,13 +1,13 @@
-//BubbleSort
-//Stable Algorithm
-//in place - requires no extra space
-//O(n^2) - Time Complexity
+// BubbleSort
+// Stable Algorithm
+// in place - requires no extra space
+// O(n^2) - Time Complexity
 
 import java.util.*;
 
 public class Bubble_sort {
 
-    //variable to count no of swaps made
+    // variable to count no of swaps made
     public static int swaps_i = 0;
 
     public static void main(String args[]) {
