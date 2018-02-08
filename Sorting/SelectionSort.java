@@ -1,7 +1,7 @@
-//SelectionSort
-//Stable Algorithm
-//in place - requires no extra space
-//O(n^2) - Time Complexity
+// SelectionSort
+// Stable Algorithm
+// in place - requires no extra space
+// O(n^2) - Time Complexity
 
 public class SelectionSort {
 
@@ -9,7 +9,7 @@ public class SelectionSort {
 
     public static void main(String args[]) {
 
-        //selecting the min element
+        // selecting the min element
         for (int i = 0; i < intArray.length; i++) {
 
             int min = intArray[i];
