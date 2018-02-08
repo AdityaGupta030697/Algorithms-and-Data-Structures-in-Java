@@ -1,9 +1,9 @@
-//Merge Sort
-//Divide and Conquer
-//Recursive Algorithm
-//Not inplace - use temporary Arrays
-//Run Time = O(nlogn)- base 2
-//Stable Algorithm
+// Merge Sort
+// Divide and Conquer
+// Recursive Algorithm
+// Not inplace - use temporary Arrays
+// Run Time = O(nlogn)- base 2
+// Stable Algorithm
 
 import java.util.*;
 
@@ -51,7 +51,7 @@ public class Merge_Sort {
             temp[tempIndex++] = input[right_i++];
         }
         
-        //Copying the temporary array to original one.
+        // Copying the temporary array to original one.
         System.arraycopy(temp, 0, input, start, tempIndex);
 
     }
