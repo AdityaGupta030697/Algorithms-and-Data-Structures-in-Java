@@ -1,7 +1,7 @@
-//ShellSort
-//Unstable Algorithm
-//in place - requires no extra space
-//Gap initialized to half of arrayLength 
+// ShellSort
+// Unstable Algorithm
+// in place - requires no extra space
+// Gap initialized to half of arrayLength 
 
 import java.util.*;
 
