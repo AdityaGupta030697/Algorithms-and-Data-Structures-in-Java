@@ -1,11 +1,11 @@
 // Assumptions are made for the input data.
 // Don't use comparisons
-// Count the number of occurance of each value
-// only works with non-negaive discrete values (not with float, strings)
-// values must be within a specific range
+// Count the number of occurances of each value
+// only works with non-negative discrete values (not with float, strings)
+// values must be within a specific range.
 // Not - in place algorithm : temporary array is being used 
 // O(n) - can achieve this
-// can be made statble with some extra work
+// can be made stable with some extra work
 
 public class Counting_Sort {
 
@@ -23,7 +23,7 @@ public class Counting_Sort {
     }
 
     public static void countingSort(int[] array, int min, int max) {
-        // create temporary array of size range 
+        // create temporary array of size-range 
         int[] temparray = new int[max - min + 1];
 
         // count the instance of numbers
@@ -31,7 +31,7 @@ public class Counting_Sort {
             temparray[array[i] - min]++;
         }
 
-        // fill the original array with the instances.
+        // fill the original array with the instances of numbers recorded in temparray.
         int j = 0;
 
         for (int i = min; i <= max; i++) {
