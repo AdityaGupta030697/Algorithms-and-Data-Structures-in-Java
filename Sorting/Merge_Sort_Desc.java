@@ -1,9 +1,9 @@
-//Merge Sort - Descending_Order
-//Divide and Conquer
-//Recursive Algorithm
-//Not inplace - use temporary Arrays
-//Run Time = O(nlogn)- base 2
-//Stable Algorithm
+// Merge Sort - Descending_Order
+// Divide and Conquer
+// Recursive Algorithm
+// Not inplace - use temporary Arrays
+// Run Time = O(nlogn)- base 2
+// Stable Algorithm
 public class Merge_Sort_Desc {
     public static void main(String args[]) {
         int[] intArray = {2, 4, 5, 1, 78, 3, 24, -243};
