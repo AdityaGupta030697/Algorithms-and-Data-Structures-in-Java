@@ -1,10 +1,10 @@
-// Radix Sort
+// Radix Sort.
 // Assumptions are made for the input data.
-// Data must have same radix and width 
-// Data must be integers or Strings
-// Sort based on individual digits/letter position
-// O(n) - can achieve this
-// statble algorithm
+// Data must have same radix and width. 
+// Data must be integers or Strings.
+// Sort based on individual digits/letter position.
+// O(n) - can achieve this.
+// stable algorithm.
 
 import java.util.*;
 
