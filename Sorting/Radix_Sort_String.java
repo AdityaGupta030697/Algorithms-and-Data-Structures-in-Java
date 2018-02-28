@@ -4,7 +4,7 @@
 // Data must be integers or Strings
 // Sort based on individual digits/letter position
 // O(n) - can achieve this
-// statble algorithm
+// stable algorithm
 
 import java.util.*;
 
