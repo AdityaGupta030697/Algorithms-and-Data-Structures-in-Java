@@ -81,6 +81,39 @@ public class BinaryTree {
             }
         }
     }
+    
+     public static void Mirror(Node root) {
+        if (root == null) {
+            return;
+        } else {
+
+            Node temp = root.left;
+            root.left = root.right;
+            root.right = temp;
+
+            Mirror(root.right);
+            Mirror(root.left);
+
+        }
+
+    }
+    
+// function should return the sum of all the 
+// leaf nodes of the binary tree 
+    public static int sumLeaf(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftval = sumLeaf(root.left);
+        int rightval = sumLeaf(root.right);
+
+        if ((root.right == null) && (root.left == null)) {
+            return root.data + leftval + rightval;
+        } else {
+            return leftval + rightval;
+        }
+
+    }
 
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
