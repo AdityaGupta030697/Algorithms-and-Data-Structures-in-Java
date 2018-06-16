@@ -98,6 +98,40 @@ public class BinaryTree {
 
     }
     
+    /* Prints the nodes having no siblings.  */
+    private static ArrayList<Integer> list;
+
+    public static void printSibling(Node node) {
+        list = new ArrayList<>();
+        printSiblingUtil(node);
+
+        if (list.isEmpty()) {
+            System.out.print("-1");
+        } else {
+            Collections.sort(list);
+            for (Integer i : list) {
+                System.out.print(i + " ");
+            }
+
+        }
+
+    }
+
+    private static void printSiblingUtil(Node node) {
+        // Your code here
+        if (node == null) {
+            return;
+        }
+        if ((node.left != null) && (node.right == null)) {
+            list.add(node.left.data);
+        } else if ((node.left == null) && (node.right != null)) {
+            list.add(node.right.data);
+        }
+        printSiblingUtil(node.left);
+        printSiblingUtil(node.right);
+
+    }
+    
 // function should return the sum of all the 
 // leaf nodes of the binary tree 
     public static int sumLeaf(Node root) {
@@ -151,6 +185,15 @@ public class BinaryTree {
         System.out.println("Non leaf nodes: " + CountNonLeafNodes(tree.root));
         System.out.println("Total nodes: " + TotalNodes(tree.root));
         System.out.println("Leaf nodes: " + CountLeafNodes(tree.root));
+
+        Mirror(tree.root);
+
+        System.out.println(tree.root.data);
+        System.out.println(tree.root.left.data);
+        System.out.println(tree.root.right.data);
+        System.out.println(tree.root.right.right.data);
+
+        printSibling(tree.root);
     }
 
 }
