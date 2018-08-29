@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class maxHeap {
@@ -29,7 +30,7 @@ public class maxHeap {
 
         heap[index] = newValue;
     }
-    
+
     private void fixHeapBelow(int index, int lastHeapIndex) {
         int childToSwap;
 
@@ -39,8 +40,7 @@ public class maxHeap {
             if (leftChild <= lastHeapIndex) {
                 if (rightChild > lastHeapIndex) {
                     childToSwap = leftChild;
-                }
-                else {
+                } else {
                     childToSwap = (heap[leftChild] > heap[rightChild] ? leftChild : rightChild);
                 }
 
@@ -48,14 +48,12 @@ public class maxHeap {
                     int tmp = heap[index];
                     heap[index] = heap[childToSwap];
                     heap[childToSwap] = tmp;
-                }
-                else {
+                } else {
                     break;
                 }
 
                 index = childToSwap;
-            }
-            else {
+            } else {
                 break;
             }
         }
@@ -68,8 +66,17 @@ public class maxHeap {
         }
         System.out.println();
     }
-    
-     public int delete(int index) {
+
+    public int peek() {
+        if (isEmpty()) {
+            throw new IndexOutOfBoundsException("Heap is empty");
+        }
+
+        return heap[0];
+
+    }
+
+    public int delete(int index) {
         if (isEmpty()) {
             throw new IndexOutOfBoundsException("Heap is empty");
         }
@@ -81,8 +88,7 @@ public class maxHeap {
 
         if (index == 0 || heap[index] < heap[parent]) {
             fixHeapBelow(index, size - 1);
-        }
-        else {
+        } else {
             fixHeapAbove(index);
         }
 
@@ -99,7 +105,7 @@ public class maxHeap {
     public int getParent(int index) {
         return (index - 1) / 2;
     }
-    
+
     public boolean isEmpty() {
         return size == 0;
     }
