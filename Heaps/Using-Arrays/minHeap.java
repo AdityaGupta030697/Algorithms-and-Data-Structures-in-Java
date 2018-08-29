@@ -27,13 +27,30 @@ public class minHeap {
 
         heap[index] = newValue;
     }
+    
+    public int peek() {
+        if (isEmpty()) {
+            throw new IndexOutOfBoundsException("Heap is empty");
+        }
 
-    public boolean isFull() {
+        return heap[0];
+
+    }
+
+     public boolean isFull() {
         return size == heap.length;
     }
 
     public int getParent(int index) {
         return (index - 1) / 2;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public int getChild(int index, boolean left) {
+        return 2 * index + (left ? 1 : 2);
     }
 
 }
